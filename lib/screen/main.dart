@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Home.dart';
+import 'Onboarding.dart';
 import 'Splash.dart';
 
 void main() => runApp(MyApp());
@@ -13,21 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: '/splash',
-        routes: {
-          '/home': (context) => Home(),
-          '/splash': (context) => Splash(),
-        },
-        home: Scaffold(
-            body: Container(
-              color: Colors.blue,
-              child: Center(
-                child: Text("Main"),
-              ),
-            )
-        )
-
-      // Home(),
+      // SET DEFALUT COLOR TO WHITE
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+      ),
+      initialRoute: '/splash',
+      routes: {
+        '/home': (context) => Onboarding(),
+        '/splash': (context) => Splash(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
