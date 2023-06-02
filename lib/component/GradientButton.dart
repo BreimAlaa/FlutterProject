@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class GradientButtonFullSize extends StatelessWidget {
+class GradientButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
 
-  const GradientButtonFullSize({
+  const GradientButton({
     required this.onPressed,
     required this.text,
   });

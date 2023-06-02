@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../component/GradientButtonFullSize.dart';
+import '../component/GradientButton.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _OnboardingState extends State<Onboarding> {
 
   void _navigateToNextPage() {
     if (_currentPageIndex == 2) {
-      Navigator.pushReplacementNamed(context, '/splash');
+      Navigator.pushReplacementNamed(context, '/login');
     }
     _pageController.animateToPage(
       _currentPageIndex + 1,
@@ -51,8 +51,7 @@ class _OnboardingState extends State<Onboarding> {
           Container(
             padding: EdgeInsets.all(35),
             width: double.infinity,
-            child: GradientButtonFullSize(
-                onPressed: _navigateToNextPage, text: "Next"),
+            child: GradientButton(onPressed: _navigateToNextPage, text: "Next"),
           ),
         ],
       ),

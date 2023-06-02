@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Login.dart';
 import 'Onboarding.dart';
 import 'Splash.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => Onboarding(),
         '/splash': (context) => Splash(),
+        '/login': (context) => Login(),
       },
       debugShowCheckedModeBanner: false,
     );
