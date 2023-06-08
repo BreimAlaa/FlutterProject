@@ -10,6 +10,12 @@ class PasswordField extends StatefulWidget {
 class _PasswordFieldState extends State<PasswordField> {
   bool _hidePassword = true;
 
+  void _togglePassword() {
+    setState(() {
+      _hidePassword = !_hidePassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,11 +50,7 @@ class _PasswordFieldState extends State<PasswordField> {
             icon: _hidePassword
                 ? Icon(Icons.visibility_off)
                 : Icon(Icons.visibility),
-            onPressed: () {
-              setState(() {
-                _hidePassword = !_hidePassword;
-              });
-            },
+            onPressed: _togglePassword,
           ),
         ),
       ),

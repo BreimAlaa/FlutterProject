@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../component/GradientButton.dart';
 
@@ -26,34 +28,51 @@ class _OnboardingState extends State<Onboarding> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: PageView(
-              physics: NeverScrollableScrollPhysics(),
-              controller: _pageController,
-              onPageChanged: (index) {
-                setState(() {
-                  _currentPageIndex = index;
-                });
-              },
-              children: [
-                OnboardingPage('assets/screen1.png',
-                    "Fast reservation with technicians and craftsmen"),
-                OnboardingPage('assets/screen2.png',
-                    "Fast reservation with technicians and craftsmen"),
-                OnboardingPage('assets/screen3.png',
-                    "Fast reservation with technicians and craftsmen"),
-              ],
+    return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ar'),
+      ],
+      home: Scaffold(
+        body: Column(
+          children: [
+            Expanded(
+              child: PageView(
+                physics: NeverScrollableScrollPhysics(),
+                controller: _pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    _currentPageIndex = index;
+                  });
+                },
+                children: [
+                  OnboardingPage(
+                      'assets/screen1.png',
+                      AppLocalizations.of(context)?.fast ??
+                          "Fast reservation with technicians and craftsmen"),
+                  OnboardingPage(
+                      'assets/screen2.png',
+                      AppLocalizations.of(context)?.fast ??
+                          "Fast reservation with technicians and craftsmen"),
+                  OnboardingPage(
+                      'assets/screen3.png',
+                      AppLocalizations.of(context)?.fast ??
+                          "Fast reservation with technicians and craftsmen"),
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(35),
-            width: double.infinity,
-            child: GradientButton(onPressed: _navigateToNextPage, text: "Next"),
-          ),
-        ],
+            Container(
+              padding: EdgeInsets.all(35),
+              width: double.infinity,
+              child:
+                  GradientButton(onPressed: _navigateToNextPage, text: "Next"),
+            ),
+          ],
+        ),
       ),
     );
   }

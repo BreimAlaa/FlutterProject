@@ -1,9 +1,12 @@
 import 'package:final_project/component/LoginView.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final appLocalization = AppLocalizations.of(context);
+
     return Scaffold(
       body: Stack(
         children: [
@@ -50,10 +53,12 @@ class Login extends StatelessWidget {
                         indicatorColor: Colors.blue,
                         tabs: [
                           Tab(
-                            child: Text('Service Provider'),
+                            child: Text(appLocalization?.serviceProvider ??
+                                "Service Provider"),
                           ),
                           Tab(
-                            child: Text('Customer'),
+                            child:
+                                Text(appLocalization?.customer ?? "Customer"),
                           ),
                         ],
                       ),
@@ -76,61 +81,3 @@ class Login extends StatelessWidget {
     );
   }
 }
-
-// class LoginPage extends StatelessWidget {
-//   final String tabText;
-//
-//   LoginPage({required this.tabText});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: EdgeInsets.all(20),
-//       child: Column(
-//         mainAxisSize: MainAxisSize.min,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           Text(
-//             tabText,
-//             style: TextStyle(
-//               fontSize: 24,
-//               fontWeight: FontWeight.bold,
-//             ),
-//           ),
-//           SizedBox(height: 20),
-//           TextField(
-//             decoration: InputDecoration(
-//               labelText: 'Phone',
-//             ),
-//           ),
-//           SizedBox(height: 10),
-//           TextField(
-//             decoration: InputDecoration(
-//               labelText: 'Password',
-//             ),
-//           ),
-//           SizedBox(height: 10),
-//           Row(
-//             children: [
-//               Checkbox(
-//                 value: false,
-//                 onChanged: (value) {},
-//               ),
-//               Text('Remember Me'),
-//               Spacer(),
-//               ElevatedButton(
-//                 onPressed: () {},
-//                 child: Text(
-//                   'Forgot Password',
-//                   style: TextStyle(
-//                     color: Colors.blue,
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

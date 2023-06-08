@@ -1,6 +1,7 @@
 import 'package:final_project/component/GradientButton.dart';
 import 'package:final_project/component/PhoneNumberField.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'PasswordField.dart';
 
@@ -11,6 +12,13 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _rememberMe = false;
+
+  // toggle remember me
+  void _toggleRememberMe() {
+    setState(() {
+      _rememberMe = !_rememberMe;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +36,7 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 InkWell(
                   borderRadius: BorderRadius.circular(12),
-                  onTap: () {
-                    setState(() {
-                      _rememberMe = !_rememberMe;
-                    });
-                  },
+                  onTap: _toggleRememberMe,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -52,7 +56,8 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       SizedBox(width: 8.0),
-                      Text('Remember Me'),
+                      Text(AppLocalizations.of(context)?.rememberMe ??
+                          "Remember me"),
                       SizedBox(width: 8.0),
                     ],
                   ),
@@ -60,8 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                 Spacer(),
                 TextButton(
                   onPressed: () {},
-                  child:
-                      Text('Forgot Password?', style: TextStyle(fontSize: 16)),
+                  child: Text(
+                      AppLocalizations.of(context)?.forget ?? "Forget Password",
+                      style: TextStyle(fontSize: 16)),
                 ),
               ],
             ),
@@ -72,7 +78,9 @@ class _LoginPageState extends State<LoginPage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('New Member?', style: TextStyle(fontSize: 16)),
+                    Text(
+                        AppLocalizations.of(context)?.newMember ?? "New member",
+                        style: TextStyle(fontSize: 16)),
                     TextButton(
                       style: TextButton.styleFrom(
                         visualDensity: VisualDensity.compact,
@@ -80,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {},
                       child: Text(
-                        'SIGN UP',
+                        AppLocalizations.of(context)?.signUp ?? "Sign up",
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 16,
@@ -93,7 +101,9 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                     height: 50,
                     width: 160,
-                    child: GradientButton(onPressed: () {}, text: "Login")),
+                    child: GradientButton(
+                        onPressed: () {},
+                        text: AppLocalizations.of(context)?.login ?? "Login")),
               ],
             ),
             Spacer(),
@@ -101,7 +111,8 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {},
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text('Get Started Now',
+                      Text(
+                      AppLocalizations.of(context)?.getStarted ?? "Get started",
                       style: TextStyle(fontSize: 16, color: Colors.black)),
                   Icon(Icons.arrow_forward_ios, size: 16)
                 ])),
