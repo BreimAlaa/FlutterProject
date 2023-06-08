@@ -66,7 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                      AppLocalizations.of(context)?.forget ?? "Forget Password",
+                      AppLocalizations.of(context)?.forget ??
+                          "Forgot Password?",
                       style: TextStyle(fontSize: 16)),
                 ),
               ],
@@ -79,7 +80,8 @@ class _LoginPageState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                        AppLocalizations.of(context)?.newMember ?? "New member",
+                        AppLocalizations.of(context)?.newMember ??
+                            "New Member?",
                         style: TextStyle(fontSize: 16)),
                     TextButton(
                       style: TextButton.styleFrom(
@@ -88,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {},
                       child: Text(
-                        AppLocalizations.of(context)?.signUp ?? "Sign up",
+                        AppLocalizations.of(context)?.signUp ?? "SIGN UP",
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 16,
@@ -114,7 +116,8 @@ class _LoginPageState extends State<LoginPage> {
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
-                      AppLocalizations.of(context)?.getStarted ?? "Get started",
+                      AppLocalizations.of(context)?.getStarted ??
+                          "Get Started Now ",
                       style: TextStyle(fontSize: 16, color: Colors.black)),
                   Icon(Icons.arrow_forward_ios, size: 16)
                 ])),

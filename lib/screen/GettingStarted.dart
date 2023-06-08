@@ -1,3 +1,4 @@
+import 'package:final_project/component/Orders.dart';
 import 'package:flutter/material.dart';
 
 import '../component/Service.dart';
@@ -20,7 +21,7 @@ class _GettingStartedState extends State<GettingStarted> {
     {
       'name': 'Orders',
       'icon': Icon(Icons.monetization_on_outlined),
-      'widget': Text("data"),
+      'widget': Orders(),
     },
     {
       'name': 'Account',
@@ -57,7 +58,9 @@ class _GettingStartedState extends State<GettingStarted> {
                     Matrix4.translationValues(_selectedIndex * width, 0, 0),
                 height: 2,
                 width: width,
-                color: Colors.black),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue)),
             Container(
               height: 80,
               child: BottomNavigationBar(
@@ -69,9 +72,9 @@ class _GettingStartedState extends State<GettingStarted> {
                 selectedFontSize: 12,
                 items: _widgetOptions
                     .map((e) => BottomNavigationBarItem(
-                          icon: e['icon'] as Widget,
-                          label: e['name'] as String,
-                        ))
+                  icon: e['icon'] as Widget,
+                  label: e['name'] as String,
+                ))
                     .toList(),
                 currentIndex: _selectedIndex,
                 onTap: _onItemTapped,

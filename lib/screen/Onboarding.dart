@@ -38,6 +38,7 @@ class _OnboardingState extends State<Onboarding> {
         Locale('ar'),
       ],
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Expanded(
@@ -69,7 +70,7 @@ class _OnboardingState extends State<Onboarding> {
               padding: EdgeInsets.all(35),
               width: double.infinity,
               child:
-                  GradientButton(onPressed: _navigateToNextPage, text: "Next"),
+              GradientButton(onPressed: _navigateToNextPage, text: "Next"),
             ),
           ],
         ),
@@ -87,6 +88,7 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
