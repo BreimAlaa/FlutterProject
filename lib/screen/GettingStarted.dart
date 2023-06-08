@@ -1,4 +1,6 @@
+import 'package:final_project/component/Account.dart';
 import 'package:final_project/component/Orders.dart';
+import 'package:final_project/screen/More.dart';
 import 'package:flutter/material.dart';
 
 import '../component/Service.dart';
@@ -26,12 +28,12 @@ class _GettingStartedState extends State<GettingStarted> {
     {
       'name': 'Account',
       'icon': Icon(Icons.account_circle_outlined),
-      'widget': Text("data"),
+      'widget': Account(),
     },
     {
       'name': 'More',
       'icon': Icon(Icons.more_horiz),
-      'widget': Text("data"),
+      'widget': More(),
     },
   ];
 
@@ -55,7 +57,7 @@ class _GettingStartedState extends State<GettingStarted> {
                 duration: Duration(milliseconds: 300),
                 curve: Curves.easeInOut,
                 transform:
-                    Matrix4.translationValues(_selectedIndex * width, 0, 0),
+                Matrix4.translationValues(_selectedIndex * width, 0, 0),
                 height: 2,
                 width: width,
                 decoration: BoxDecoration(
@@ -68,7 +70,7 @@ class _GettingStartedState extends State<GettingStarted> {
                 type: BottomNavigationBarType.fixed,
                 unselectedItemColor: Colors.white,
                 selectedIconTheme:
-                    const IconThemeData(color: Colors.white, size: 30),
+                const IconThemeData(color: Colors.white, size: 30),
                 selectedFontSize: 12,
                 items: _widgetOptions
                     .map((e) => BottomNavigationBarItem(

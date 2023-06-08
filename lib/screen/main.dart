@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'ChoiceCard.dart';
 import 'GettingStarted.dart';
 import 'Login.dart';
 import 'Onboarding.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Onboarding(),
         '/login': (context) => Login(),
         '/getting-started': (context) => const GettingStarted(),
+        '/choice-card': (context) => const ChoiceCard(),
       },
       debugShowCheckedModeBanner: false,
     );

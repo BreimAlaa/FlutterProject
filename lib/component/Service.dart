@@ -24,7 +24,7 @@ class Service extends StatelessWidget {
       (index) => Material(
         child: InkWell(
           onTap: () {
-            print('tapped');
+            Navigator.pushNamed(context, '/choice-card');
           },
           child: Container(
             decoration: BoxDecoration(
