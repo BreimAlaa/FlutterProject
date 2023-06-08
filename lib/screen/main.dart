@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'GettingStarted.dart';
 import 'Login.dart';
 import 'Onboarding.dart';
 import 'Splash.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/splash': (context) => const Splash(),
         '/home': (context) => const Onboarding(),
         '/login': (context) => Login(),
+        '/getting-started': (context) => const GettingStarted(),
       },
       debugShowCheckedModeBanner: false,
     );

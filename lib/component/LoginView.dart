@@ -108,10 +108,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Spacer(),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/getting-started');
+                },
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      Text(
+                  Text(
                       AppLocalizations.of(context)?.getStarted ?? "Get started",
                       style: TextStyle(fontSize: 16, color: Colors.black)),
                   Icon(Icons.arrow_forward_ios, size: 16)
