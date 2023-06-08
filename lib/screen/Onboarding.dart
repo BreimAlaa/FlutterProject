@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/apper_localizations.dart';
 
 import '../component/GradientButton.dart';
 
@@ -43,16 +42,16 @@ class _OnboardingState extends State<Onboarding> {
                 children: [
                   OnboardingPage(
                       'assets/screen1.png',
-                      AppLocalizations.of(context)?.fast ??
-                          "Fast reservation with technicians and craftsmen"),
+                      // AppLocalizations.of(context)?.fast ??
+                    "Fast reservation with technicians and craftsmen"),
                   OnboardingPage(
                       'assets/screen2.png',
-                      AppLocalizations.of(context)?.fast ??
-                          "Fast reservation with technicians and craftsmen"),
+                      // AppLocalizations.of(context)?.fast ??
+                    "Fast reservation with technicians and craftsmen"),
                   OnboardingPage(
                       'assets/screen3.png',
-                      AppLocalizations.of(context)?.fast ??
-                          "Fast reservation with technicians and craftsmen"),
+                      // AppLocalizations.of(context)?.fast ??
+                    "Fast reservation with technicians and craftsmen"),
                 ],
               ),
             ),
