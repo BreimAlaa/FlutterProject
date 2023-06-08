@@ -1,7 +1,8 @@
+import 'package:final_project/component/PhoneNumberField.dart';
 import 'package:flutter/material.dart';
 
-class ChoiceCard extends StatelessWidget {
-  const ChoiceCard({super.key});
+class CardInfo extends StatelessWidget {
+  const CardInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,26 +57,23 @@ class ChoiceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  'assets/image.png',
+                  'assets/map.png',
                   fit: BoxFit.cover,
                   width: double.infinity,
                 ),
-                SizedBox(height: 10),
-                Text(
-                  "image must be no more than 2 MB Max 5 Image",
-                  style: TextStyle(color: Colors.grey, fontSize: 12),
-                ),
-                SizedBox(height: 40),
+                SizedBox(height: 25),
                 TextField(
                   maxLines: 5,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey, width: 1.0),
                     ),
-                    hintText: 'More Details About Problem …...',
+                    hintText: 'More Details About Location …...',
                     hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),
+                SizedBox(height: 25),
+                PhoneNumberField()
               ],
             ),
           ),
@@ -93,7 +91,7 @@ class ChoiceCard extends StatelessWidget {
                 overlayColor: MaterialStateProperty.all(Colors.white24),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/card-info');
+                Navigator.pushNamed(context, '/order-done');
               },
               child: Text(
                 'Next',

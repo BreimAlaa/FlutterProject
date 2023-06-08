@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'CardInfo.dart';
 import 'ChoiceCard.dart';
 import 'GettingStarted.dart';
 import 'Login.dart';
 import 'Onboarding.dart';
+import 'OrderDone.dart';
 import 'Splash.dart';
 
 void main() => runApp(MyApp());
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/getting-started': (context) => const GettingStarted(),
         '/choice-card': (context) => const ChoiceCard(),
+        '/card-info': (context) => const CardInfo(),
+        '/order-done': (context) => const OrderDone(),
       },
       debugShowCheckedModeBanner: false,
     );
