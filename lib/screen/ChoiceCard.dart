@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChoiceCard extends StatelessWidget {
   const ChoiceCard({super.key});
@@ -39,7 +40,7 @@ class ChoiceCard extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  'More',
+                  AppLocalizations.of(context)!.more,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -62,7 +63,7 @@ class ChoiceCard extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "image must be no more than 2 MB Max 5 Image",
+                  AppLocalizations.of(context)!.imageSizeLimit,
                   style: TextStyle(color: Colors.grey, fontSize: 12),
                 ),
                 SizedBox(height: 40),
@@ -72,7 +73,7 @@ class ChoiceCard extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey, width: 1.0),
                     ),
-                    hintText: 'More Details About Problem …...',
+                    hintText: AppLocalizations.of(context)!.moreDetailsHint,
                     hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),
@@ -96,7 +97,7 @@ class ChoiceCard extends StatelessWidget {
                 Navigator.pushNamed(context, '/card-info');
               },
               child: Text(
-                'Next',
+                AppLocalizations.of(context)!.next,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,

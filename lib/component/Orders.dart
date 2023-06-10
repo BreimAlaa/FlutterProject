@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'OrderItem.dart';
 
 class Orders extends StatefulWidget {
-  const Orders({super.key});
+  const Orders({Key? key});
 
   @override
   State<Orders> createState() => _OrdersState();
@@ -13,10 +14,11 @@ class _OrdersState extends State<Orders> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(
-          color: Color(0xFFEAEFFF),
-          child: Column(children: [
+      backgroundColor: Colors.white,
+      body: Container(
+        color: Color(0xFFEAEFFF),
+        child: Column(
+          children: [
             Container(
               alignment: Alignment.center,
               width: double.infinity,
@@ -27,11 +29,14 @@ class _OrdersState extends State<Orders> {
                 ),
               ),
               child: SafeArea(
-                child: Text("Item Details",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold)),
+                child: Text(
+                  AppLocalizations.of(context)!.itemDetails,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
             Expanded(
@@ -50,13 +55,19 @@ class _OrdersState extends State<Orders> {
                         indicatorColor: Colors.blue,
                         tabs: [
                           Tab(
-                            child: Text("Pending"),
+                            child: Text(
+                              AppLocalizations.of(context)!.pending,
+                            ),
                           ),
                           Tab(
-                            child: Text("Underway"),
+                            child: Text(
+                              AppLocalizations.of(context)!.underway,
+                            ),
                           ),
                           Tab(
-                            child: Text("Completed"),
+                            child: Text(
+                              AppLocalizations.of(context)!.completed,
+                            ),
                           ),
                         ],
                       ),
@@ -67,61 +78,73 @@ class _OrdersState extends State<Orders> {
                           Column(
                             children: [
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                               OrderItem(
-                                  id: "52001",
-                                  type: "Carpenter",
-                                  date: "28 Nov 2019"),
+                                id: "52001",
+                                type: AppLocalizations.of(context)!.carpenter,
+                                date: "28 Nov 2019",
+                              ),
                             ],
                           ),
                         ],
@@ -130,8 +153,10 @@ class _OrdersState extends State<Orders> {
                   ],
                 ),
               ),
-            )
-          ]),
-        ));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

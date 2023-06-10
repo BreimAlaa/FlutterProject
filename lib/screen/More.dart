@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class More extends StatelessWidget {
-  const More({super.key});
+  const More({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class More extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                'More',
+                AppLocalizations.of(context)!.more,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -57,7 +58,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Change Password',
+                      AppLocalizations.of(context)!.changePassword,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -78,7 +79,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'FAQ\'s',
+                      AppLocalizations.of(context)!.faqs,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -99,7 +100,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'About App',
+                      AppLocalizations.of(context)!.aboutApp,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -120,7 +121,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Terms & Conditions',
+                      AppLocalizations.of(context)!.termsConditions,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -141,7 +142,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Privacy Policy',
+                      AppLocalizations.of(context)!.privacyPolicy,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -162,7 +163,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Rate App',
+                      AppLocalizations.of(context)!.rateApp,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -183,7 +184,7 @@ class More extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Delete Account',
+                      AppLocalizations.of(context)!.deleteAccount,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,

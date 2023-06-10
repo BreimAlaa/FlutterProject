@@ -2,6 +2,7 @@ import 'package:final_project/component/Account.dart';
 import 'package:final_project/component/Orders.dart';
 import 'package:final_project/screen/More.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../component/Service.dart';
 
@@ -14,28 +15,6 @@ class GettingStarted extends StatefulWidget {
 
 class _GettingStartedState extends State<GettingStarted> {
   int _selectedIndex = 0;
-  final _widgetOptions = [
-    {
-      'name': 'Service',
-      'icon': ImageIcon(AssetImage('assets/LOGO.png')),
-      'widget': Service(),
-    },
-    {
-      'name': 'Orders',
-      'icon': Icon(Icons.monetization_on_outlined),
-      'widget': Orders(),
-    },
-    {
-      'name': 'Account',
-      'icon': Icon(Icons.account_circle_outlined),
-      'widget': Account(),
-    },
-    {
-      'name': 'More',
-      'icon': Icon(Icons.more_horiz),
-      'widget': More(),
-    },
-  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -45,6 +24,29 @@ class _GettingStartedState extends State<GettingStarted> {
 
   @override
   Widget build(BuildContext context) {
+    final _widgetOptions = [
+      {
+        'name': AppLocalizations.of(context)!.service,
+        'icon': ImageIcon(AssetImage('assets/LOGO.png')),
+        'widget': Service(),
+      },
+      {
+        'name': AppLocalizations.of(context)!.orders,
+        'icon': Icon(Icons.monetization_on_outlined),
+        'widget': Orders(),
+      },
+      {
+        'name': AppLocalizations.of(context)!.account,
+        'icon': Icon(Icons.account_circle_outlined),
+        'widget': Account(),
+      },
+      {
+        'name': AppLocalizations.of(context)!.more,
+        'icon': Icon(Icons.more_horiz),
+        'widget': More(),
+      },
+    ];
+
     var width = MediaQuery.of(context).size.width / _widgetOptions.length;
     return Scaffold(
         backgroundColor: Colors.white,

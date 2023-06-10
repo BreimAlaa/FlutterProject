@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Service extends StatelessWidget {
-  final _titles = List.filled(12, "Carpenter");
   final _icons = [
     Icons.home_outlined,
     Icons.search_outlined,
@@ -19,6 +19,7 @@ class Service extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _titles = List.filled(12, AppLocalizations.of(context)!.carpenter);
     List<Widget> _tiles = List.generate(
       12,
       (index) => Material(
@@ -30,18 +31,18 @@ class Service extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blue),
               borderRadius: BorderRadius.circular(8),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(_icons[index], color: Colors.blue),
-                SizedBox(height: 8),
-                Text(_titles[index], style: TextStyle(color: Colors.blue)),
-              ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(_icons[index], color: Colors.blue),
+                    SizedBox(height: 8),
+                    Text(_titles[index], style: TextStyle(color: Colors.blue)),
+                  ],
+                ),
+              ),
             ),
           ),
-        ),
-      ),
     );
 
     return Stack(
@@ -104,7 +105,7 @@ class Service extends StatelessWidget {
               Container(
                 // margin: EdgeInsets.all(10),
                 child: Text(
-                  'Select Service',
+                  AppLocalizations.of(context)!.selectService,
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 20,

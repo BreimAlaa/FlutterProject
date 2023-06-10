@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 const countryPrefixes = {
   '970': 'PS',
@@ -291,7 +292,7 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                 },
               ),
             ),
-            hintText: 'Phone Number',
+            hintText: AppLocalizations.of(context)?.phone ?? 'Phone Number',
           ),
         ));
   }

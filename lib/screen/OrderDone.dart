@@ -1,5 +1,6 @@
 import 'package:final_project/component/GradientButton.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OrderDone extends StatelessWidget {
   const OrderDone({super.key});
@@ -31,10 +32,11 @@ class OrderDone extends StatelessWidget {
         ),
         SizedBox(height: 70),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'ORDER',
+              AppLocalizations.of(context)!.order,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 24,
@@ -42,7 +44,7 @@ class OrderDone extends StatelessWidget {
               ),
             ),
             Text(
-              ' DONE!',
+              AppLocalizations.of(context)!.done,
               style: TextStyle(
                 color: Colors.blue,
                 fontSize: 24,
@@ -53,9 +55,10 @@ class OrderDone extends StatelessWidget {
         ),
         SizedBox(height: 20),
         Container(
+          alignment: Alignment.center,
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Text(
-            'The ORDER has been sent. A technician will contact you',
+            AppLocalizations.of(context)!.orderDoneText,
             style: TextStyle(
               color: Colors.black,
               fontSize: 16,
@@ -72,7 +75,7 @@ class OrderDone extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.pop(context);
                 },
-                text: "GO TO HOME"))
+                text: AppLocalizations.of(context)!.goToHome))
       ]),
     );
   }

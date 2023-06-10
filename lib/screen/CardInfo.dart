@@ -1,5 +1,6 @@
 import 'package:final_project/component/PhoneNumberField.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CardInfo extends StatelessWidget {
   const CardInfo({super.key});
@@ -40,7 +41,7 @@ class CardInfo extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  'More',
+                  AppLocalizations.of(context)!.more,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -68,7 +69,7 @@ class CardInfo extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey, width: 1.0),
                     ),
-                    hintText: 'More Details About Location …...',
+                    hintText: AppLocalizations.of(context)!.locationDetailsHint,
                     hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),
@@ -94,7 +95,7 @@ class CardInfo extends StatelessWidget {
                 Navigator.pushNamed(context, '/order-done');
               },
               child: Text(
-                'Next',
+                AppLocalizations.of(context)!.next,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,

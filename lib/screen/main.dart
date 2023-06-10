@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'CardInfo.dart';
 import 'ChoiceCard.dart';
@@ -19,14 +19,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     myContext = context;
     return MaterialApp(
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en'),
-        Locale('ar'),
-      ],
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+
+      // localizationsDelegates: const [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      // ],
+      // supportedLocales: const [
+      //   Locale('en'),
+      //   Locale('ar'),
+      // ],
+
       theme: ThemeData(
         fontFamily: 'Poppins',
       ),

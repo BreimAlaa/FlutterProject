@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Account extends StatelessWidget {
   const Account({
@@ -69,7 +70,7 @@ class Account extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'Seraj Al Mutawa',
+                      AppLocalizations.of(context)!.accountName,
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -77,7 +78,7 @@ class Account extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'Riyadh, Saudi Arabia',
+                      AppLocalizations.of(context)!.location,
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -88,7 +89,7 @@ class Account extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Language',
+                            AppLocalizations.of(context)!.languageLabel,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -97,7 +98,7 @@ class Account extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            'English ',
+                            AppLocalizations.of(context)!.language,
                             style: TextStyle(
                               color: Color(0xFFC2CECE),
                               fontSize: 15,
@@ -116,7 +117,7 @@ class Account extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'My Rates',
+                            AppLocalizations.of(context)!.myRates,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -137,7 +138,7 @@ class Account extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Contact us',
+                            AppLocalizations.of(context)!.contactUs,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -158,7 +159,7 @@ class Account extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Share App',
+                            AppLocalizations.of(context)!.shareApp,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -189,7 +190,7 @@ class Account extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'SIGN OUT',
+                            AppLocalizations.of(context)!.signOut,
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.normal,

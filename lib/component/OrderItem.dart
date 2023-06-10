@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OrderItem extends StatelessWidget {
-  const OrderItem(
-      {super.key, required this.id, required this.type, required this.date});
+  const OrderItem({
+    Key? key,
+    required this.id,
+    required this.type,
+    required this.date,
+  }) : super(key: key);
 
   final String id;
   final String type;
@@ -20,17 +25,26 @@ class OrderItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Order #$id"),
-              Text(date, style: TextStyle(color: Colors.grey))
+              Text("${AppLocalizations.of(context)!.orderNumber} #$id"),
+              Text(
+                date,
+                style: TextStyle(color: Colors.grey),
+              ),
             ],
           ),
           SizedBox(height: 30),
           Row(
             children: [
-              Text("Service Type: ", style: TextStyle(color: Colors.grey)),
-              Text(type, style: TextStyle(color: Colors.blue)),
+              Text(
+                AppLocalizations.of(context)!.serviceTypeLabel,
+                style: TextStyle(color: Colors.grey),
+              ),
+              Text(
+                type,
+                style: TextStyle(color: Colors.blue),
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
